@@ -1,0 +1,14 @@
+plugins {
+    id 'application'
+    id 'scala'
+}
+
+mainClassName = 'scala_app.Program'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.12.8'
+}
