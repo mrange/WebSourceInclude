@@ -5,20 +5,21 @@ package scala_app
 
 package web_source_include.streams {
 
-// ### INCLUDE: ../logs/Log.scala
+  // ### INCLUDE: ../logs/Log.scala
 // @@@ INCLUDE: https://raw.githubusercontent.com/mrange/WebSourceInclude/master/tests/scala_include/logs/Log.scala
 
-trait PushStream[+T] {
-  def build(r: T => Boolean): Boolean
-}
-
-object PushStream {
-  def empty = new PushStream[Nothing] {
-    def build(r: Nothing => Boolean): Boolean = true
+  trait PushStream[+T] {
+    def build(r: T => Boolean): Boolean
   }
-}
+
+  object PushStream {
+    def empty = new PushStream[Nothing] {
+      def build(r: Nothing => Boolean): Boolean = true
+    }
+  }
 
 }
+
 // @@@ END: https://raw.githubusercontent.com/mrange/WebSourceInclude/master/tests/scala_include/streams/PushStream.scala
 
 
@@ -26,9 +27,9 @@ object PushStream {
 
 package web_source_include.logs {
 
-trait Log {
-  def log(m: String): Unit
-}
+  trait Log {
+    def log(m: String): Unit
+  }
 
 }
 
