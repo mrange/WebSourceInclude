@@ -1,9 +1,10 @@
 import urllib.request
 import re
 
-root_url      = "https://raw.githubusercontent.com/mrange/mrange.github.io/master/"
-target_file   = "include.scala"
-root_package  = "Include"
+
+root_url      = "https://raw.githubusercontent.com/mrange/WebSourceInclude/master/tests/scala_include/"
+target_file   = "../tests/scala_app/src/main/scala/scala_app/WebSourceInclude.scala"
+root_package  = "scala_app"
 
 class Include:
   def __init__(self, path):
@@ -14,8 +15,7 @@ class Include:
 
 
 includes = [
-    Include("README.md"),
-    Include("README.md"),
+    Include("streams/PushStream.scala")
   ]
 
 regex_include = re.compile("""^\s*//\s*###\s*INCLUDE:\s*(?P<path>\S+)\s*$""")
